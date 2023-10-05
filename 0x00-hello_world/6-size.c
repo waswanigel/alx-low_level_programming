@@ -6,9 +6,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main-Entry point for program execution.
  *
- * Return: Always 0 (Success)
+ * Description: This is the main function of a C program that prints
+ * sizes of various types on the computer it is compiled and run on
+ * and then returns zero.
+ *
+ * Return: 0 on Success.
  */
 
 int main(void)
