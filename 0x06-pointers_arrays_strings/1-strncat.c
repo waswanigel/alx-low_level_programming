@@ -4,7 +4,7 @@
  * _strncat - appends at most n characters from src to dest
  * @dest:  destination string
  * @src: source string
- * @n: max appended characters
+ * @n: most bytes from src
  */
 
 char *_strncat(char *dest, char *src, int n)
