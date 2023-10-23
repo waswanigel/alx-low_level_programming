@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_diagsums -  prints sum of the 2 diagonals of a sqr matrix of integers
@@ -20,33 +21,5 @@ void print_diagsums(int *a, int size)
 		sum_antiDiag += a[i * (size - 1 - i)];
 	}
 
-	print_num(sum_mainDiag);
-	_putchar(',');
-	_putchar(' ');
-	print_num(sum_antiDiag);
-	_putchar('\n');
+	printf("%d, %d\n", sum_mainDiag, sum_antiDiag);
 }
-
-/**
- * print_num - handles positive and negative numbers
- * @n: the number
- */
-void print_num(int n)
-{
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-	{
-		print_num(n / 10);
-	}
-	_putchar((n % 10) + '0');
-}
-
