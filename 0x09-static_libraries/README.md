@@ -1,5 +1,1 @@
-
-
-
-
 Learning static libraries
