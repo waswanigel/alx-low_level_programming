@@ -14,27 +14,29 @@ int main(int argc, char *argv[])
 	unsigned int b, sum = 0;
 	char *num;
 
-	if (argc == 1)
+	if (argc > 1)
+	{
+		for (a = 1; a < argc; a++)
+		{
+			num = argv[a];
+
+			for (b = 0; b < strlen(num); b++)
+			{
+				if (num[b] < 48 || num[b] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(num);
+			num++;
+		}
+		printf("%d\n", sum);
+	}
+	else
 	{
 		printf("0\n");
 	}
-
-	for (a = 1; a < argc; a++)
-	{
-		num = argv[a];
-
-		for (b = 0; b < strlen(num); b++)
-		{
-			if (num[b] < 48 || num[b] > 57)
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		sum += atoi(num);
-		num++;
-	}
-	printf("%d\n", sum);
 
 	return (0);
 }
