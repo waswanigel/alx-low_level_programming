@@ -18,7 +18,7 @@ int countWords(char *str, char *d)
 
 	if (str == NULL || *str == '\0')
 	{
-		return (NULL);
+		return (0);
 	}
 	wordcount = 0;
 
@@ -26,7 +26,7 @@ int countWords(char *str, char *d)
 
 	if (temp == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 	portion = strtok(temp, d);
 
@@ -49,7 +49,8 @@ char **strtow(char *str)
 {
 	char **words, d[] = " ";
 	int wordcount = countWords(str, d);
-	int *portion, index = 0, i;
+	int index = 0, i;
+	char *portion;
 
 	if (str == NULL || *str == '\0')
 	{
