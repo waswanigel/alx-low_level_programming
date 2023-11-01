@@ -52,6 +52,11 @@ char **strtow(char *str)
 	int index = 0, i;
 	char *portion;
 
+	if (wordcount == 0)
+	{
+		return (NULL);
+	}
+
 	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
