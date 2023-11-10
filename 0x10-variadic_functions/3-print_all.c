@@ -2,16 +2,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void print_char(va_list arg);
-void print_int(va_list arg);
-void print_float(va_list arg);
-void print_string(va_list arg);
-void print_all(const char * const format, ...);
-
 /**
  * print_char - Prints a char.
- * @arg: A list of arguments pointing to
- *       the character to be printed.
+ * @arg: variable argument list of characters
  */
 void print_char(va_list arg)
 {
@@ -23,8 +16,7 @@ void print_char(va_list arg)
 
 /**
  * print_int - Prints an int.
- * @arg: A list of arguments pointing to
- *       the integer to be printed.
+ * @arg: variable argument list of integers
  */
 void print_int(va_list arg)
 {
@@ -36,8 +28,7 @@ void print_int(va_list arg)
 
 /**
  * print_float - Prints a float.
- * @arg: A list of arguments pointing to
- *       the float to be printed.
+ * @arg: variable argument list of floats
  */
 void print_float(va_list arg)
 {
@@ -49,8 +40,7 @@ void print_float(va_list arg)
 
 /**
  * print_string - Prints a string.
- * @arg: A list of arguments pointing to
- *       the string to be printed.
+ * @arg: variable argument list of type string
  */
 void print_string(va_list arg)
 {
@@ -69,8 +59,8 @@ void print_string(va_list arg)
 
 /**
  * print_all - Prints anything, followed by a new line.
- * @format: A string of characters representing the argument types.
- * @...: A variable number of arguments to be printed.
+ * @format: A string
+ * @...: undefined number of arguments to be printed.
  *
  * Description: Any argument not of type char, int, float,
  *              or char * is ignored.
@@ -111,4 +101,3 @@ void print_all(const char * const format, ...)
 
 	va_end(args);
 }
-
